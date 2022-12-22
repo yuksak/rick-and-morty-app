@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { Layout } from "./components";
+
 import { AboutPage, HomePage, NotFoundPage } from "./pages";
+import { Layout } from "./components";
 
 const routes = [
   { path: "/", element: <HomePage /> },
@@ -13,7 +14,7 @@ const App = () => {
     <Routes>
       <Route element={<Layout />}>
         {routes.map((route) => (
-          <Route path={route.path} element={route.element} />
+          <Route key={route.path} path={route.path} element={route.element} />
         ))}
       </Route>
     </Routes>
