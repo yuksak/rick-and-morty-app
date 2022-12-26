@@ -1,22 +1,22 @@
-import React from "react";
-import { FiSearch } from "react-icons/fi";
+import React from 'react';
+import { FiSearch } from 'react-icons/fi';
 
 export const Searcher = () => {
   return (
     <form className="my-5 max-w-sm mx-2 sm:mx-0 relative">
       <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <FiSearch className="w-5 h-5 text-zinc-500 dark:text-zinc-400" />
+        <FiSearch className="w-5 h-5 text-secondary-light dark:text-secondary-lighter" />
       </div>
       <input
         type="search"
         id="default-search"
-        className="block outline-none  w-full p-4 pl-10 text-sm text-zinc-900 border border-zinc-300 rounded-lg bg-zinc-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-zinc-800 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="block outline-none rounded-lg w-full p-2 sm:p-4 pl-10 sm:pl-10 text-sm text-secondary-darkest border border-secondary-lightest round focus:border-primary dark:bg-secondary-darker dark:border-secondary dark:placeholder-secondary-lighter dark:text-white dark:focus:border-primary"
         placeholder="Search"
         required
       />
       <button
         type="submit"
-        className="transition-all ease-in duration-75 text-white absolute right-2.5 bottom-2.5 bg-blue-500 hover:hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-zinc-600 dark:hover:bg-gradient-to-br from-cyan-500 to-blue-500 dark:focus:ring-blue-800"
+        className="transition-all ease-in duration-75 text-white absolute right-1 sm:right-2 bottom-1.5 sm:bottom-2.5 px-2 py-1 sm:px-4 sm:py-2 focus:outline-none font-medium rounded-md sm:rounded-lg text-sm bg-primary hover:hover:bg-gradient-to-br dark:bg-secondary dark:hover:bg-gradient-to-br from-cyan-500 to-primary"
       >
         Search
       </button>

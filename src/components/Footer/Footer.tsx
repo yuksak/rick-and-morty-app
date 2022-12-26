@@ -14,13 +14,13 @@ const links = [
 
 export const Footer = () => {
   return (
-    <footer className="p-4 mx-2 mb-2 mt-auto sm:mb-5 border-zinc-200 dark:border-zinc-600 bg-white rounded-lg border border-g flex flex-col items-center sm:flex-row sm:justify-between md:p-6 dark:bg-zinc-800">
-      <span className="text-sm text-zinc-500 sm:text-center dark:text-zinc-400">
+    <footer className="p-4 mx-2 mb-2 mt-auto sm:mb-5 rounded-lg border border-g flex flex-col items-center sm:flex-row sm:justify-between md:p-6 border-secondary-lightest dark:border-secondary bg-white dark:bg-secondary-darker">
+      <span className="text-sm text-secondary-light sm:text-center dark:text-secondary-lighter">
         © 2022 Yuksak. All Rights Reserved.
       </span>
-      <ul className="flex flex-wrap items-center mt-3 text-xl text-zinc-500 dark:text-zinc-400 sm:mt-0 gap-3">
+      <ul className="flex flex-wrap items-center mt-3 sm:mt-0 gap-3 text-xl text-secondary-light dark:text-secondary-lighter">
         {links.map((link) => (
-          <li key={link.name} className="flex hover:text-blue-500 items-center hover:animate-pulse">
+          <li key={link.name} className="flex items-center hover:animate-pulse hover:text-primary">
             <a href={link.path}>{link.logo}</a>
           </li>
         ))}

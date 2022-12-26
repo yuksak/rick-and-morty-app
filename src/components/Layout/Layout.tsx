@@ -7,7 +7,7 @@ export const Layout = () => {
 
   return (
     <div className={`${darkMode ? 'dark' : ''}`}>
-      <div className="min-h-screen flex flex-col dark:bg-zinc-900">
+      <div className="min-h-screen flex flex-col dark:bg-secondary-darkest">
         <div className="my-1 py-8" />
         <Navbar />
         <Outlet />
