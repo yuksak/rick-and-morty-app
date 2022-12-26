@@ -1,8 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
+import { characterReducer, darkModeReducer } from './slices';
 
 const store = configureStore({
   reducer: {
-    //   characters: ,
+    characters: characterReducer,
+    darkMode: darkModeReducer,
     //   locations: ,
     //   episodes:
   },
