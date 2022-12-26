@@ -1,12 +1,12 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 
-import { AboutPage, HomePage, NotFoundPage } from "pages";
-import { Layout } from "components";
+import { AboutPage, HomePage, NotFoundPage } from 'pages';
+import { Layout } from 'components';
 
 const routes = [
-  { path: "/", component: <HomePage /> },
-  { path: "/about", component: <AboutPage /> },
-  { path: "*", component: <NotFoundPage /> },
+  { path: '/', component: <HomePage /> },
+  { path: '/about', component: <AboutPage /> },
+  { path: '*', component: <NotFoundPage /> },
 ];
 
 const App = () => {
