@@ -23,9 +23,9 @@ export interface ICharacterSlice {
   info: {
     count: number;
     pages: number;
-    next: string | null;
-    prev: string | null;
+    next: number;
+    prev: number;
   };
   results: ICharacter[];
-  status: "Pending" | "Fulfilled" | "Rejected";
+  status: 'Pending' | 'Fulfilled' | 'Rejected';
 }
