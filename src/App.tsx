@@ -1,7 +1,10 @@
+import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { AboutPage, HomePage, NotFoundPage } from 'pages';
 import { Layout } from 'components';
+import { useAppDispatch } from 'hooks/redux-hooks';
+import { getCharacters } from 'api';
 
 const routes = [
   { path: '/', component: <HomePage /> },
@@ -10,6 +13,11 @@ const routes = [
 ];
 
 const App = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getCharacters());
+  }, []);
   return (
     <Routes>
       <Route element={<Layout />}>
