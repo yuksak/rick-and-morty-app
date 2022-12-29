@@ -10,9 +10,9 @@ export const SpinnerAlert = () => {
   return (
     <div className="text-center">
       {status === 'Rejected' ? (
-        <p className="text-secondary-darkest dark:text-white flex items-center justify-center">
+        <p className="text-secondary-darkest text-xs md:text-base dark:text-white flex items-center justify-center">
           <MdSmsFailed className="mr-2 w-8 h-8 animate-pulse fill-danger" />
-          Something went wrong.
+          No results found or something went wrong.
         </p>
       ) : (
         <CgSpinner className="inline mr-2 w-8 h-8 text-primary animate-spin dark:text-secondary fill-secondary" />
