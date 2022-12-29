@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from 'hooks/redux-hooks';
-
-import { getAllCharacters } from 'api';
-import { CardsList, Searcher, SpinnerAlert } from 'components';
+import React from 'react';
+import { useAppSelector } from 'hooks/redux-hooks';
+import { CardsList, Pagination, Searcher, SpinnerAlert } from 'components';
 
 export const HomePage = () => {
-  const { status } = useAppSelector((state) => state.characters);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(getAllCharacters());
-  }, []);
+  const { status, info } = useAppSelector((state) => state.characters);
 
   return (
     <div className="container mx-auto">
       <Searcher />
-      {status === 'Fulfilled' ? <CardsList /> : <SpinnerAlert />}
+      {status === 'Fulfilled' ? (
+        <>
+          <CardsList />
+          {info.pages > 1 && <Pagination />}
+        </>
+      ) : (
+        <SpinnerAlert />
+      )}
     </div>
   );
 };
