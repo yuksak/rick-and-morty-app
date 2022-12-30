@@ -26,7 +26,7 @@ export const NavLinks: FC<INavLinksProps> = ({ menuToggle }) => {
               className={({ isActive }) =>
                 `block py-2 pl-3 pr-4 text-white rounded ${
                   isActive
-                    ? 'sm:underline bg-primary-light md:bg-transparent md:p-0 dark:text-white dark:bg-secondary dark:sm:bg-transparent'
+                    ? 'bg-primary-light md:p-0 dark:text-white dark:bg-secondary md:px-2'
                     : 'text-secondary-lightest hover:bg-primary-dark md:hover:bg-transparent md:hover:text-primary-dark md:p-0 md:dark:hover:text-white dark:text-secondary-lighter dark:hover:bg-secondary-dark dark:hover:text-white md:dark:hover:bg-transparent dark:border-secondary-dark'
                 }`
               }
