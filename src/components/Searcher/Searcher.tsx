@@ -26,24 +26,26 @@ export const Searcher = () => {
   };
 
   return (
-    <form className="my-5 max-w-sm mx-2 sm:mx-0 relative">
-      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <FiSearch className="w-5 h-5 text-secondary-light dark:text-secondary-lighter" />
+    <form className="flex items-center">
+      <div className="relative w-full">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <FiSearch className="w-3 h-3 sm:w-5 sm:h-5 text-secondary-light dark:text-secondary-lighter" />
+        </div>
+        <input
+          type="text"
+          id="simple-search"
+          className="bg-gray-50 border outline-none border-gray-300 text-secondary-darkest text-sm rounded-lg focus:border-primary-light block w-full pl-7 sm:pl-10 p-2.5  dark:bg-secondary-darker dark:border-secondary dark:placeholder-gray-400 dark:text-white dark:focus:border-secondary-lighter"
+          placeholder="Search"
+          required
+        />
       </div>
-      <input
-        type="search"
-        id="default-search"
-        className="block outline-none rounded-lg w-full p-2 sm:p-4 pl-10 sm:pl-10 text-sm text-secondary-darkest border border-secondary-lightest round focus:border-primary dark:bg-secondary-dark dark:border-secondary dark:placeholder-secondary-lighter dark:text-white dark:focus:border-primary"
-        placeholder="Search"
-        ref={input}
-        required
-      />
-      <Button
+      <button
         onClick={submitHandler}
-        classes={'absolute right-1 sm:right-2 bottom-1 sm:bottom-2.5'}
+        type="submit"
+        className="p-2.5 ml-2 text-sm font-medium text-white bg-primary rounded-lg border border-primary hover:bg-primary-dark focus:outline-none  dark:bg-secondary-darker dark:border-secondary dark:hover:bg-secondary-darker "
       >
-        Search
-      </Button>
+        <FiSearch className="w-5 h-5 " />
+      </button>
     </form>
   );
 };
