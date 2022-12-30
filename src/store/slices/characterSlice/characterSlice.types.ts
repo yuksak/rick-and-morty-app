@@ -19,6 +19,17 @@ export interface ICharacter {
   created: string;
 }
 
+export enum ECharacter {
+  name = 'Name',
+  status = 'Status',
+  species = 'Species',
+  type = 'Type',
+  gender = 'Gender',
+  origin = 'Origin',
+  location = 'Location',
+  created = 'Created',
+}
+
 export interface ICharacterSlice {
   info: {
     count: number;
