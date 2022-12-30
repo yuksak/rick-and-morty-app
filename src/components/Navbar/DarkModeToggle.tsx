@@ -21,7 +21,7 @@ export const DarkModeToggle = () => {
   return (
     <button
       type="button"
-      className="text-white dark:text-warning-light text-xl cursor-pointer md:border border-primary-light rounded-lg p-3 focus:ring-primary dark:border-secondary"
+      className="text-white dark:text-warning-light text-xl cursor-pointer md:border border-primary-light rounded-lg p-2.5 focus:ring-primary dark:border-secondary"
       onClick={toggleHandler}
     >
       {darkMode ? <MdDarkMode /> : <MdLightMode />}
