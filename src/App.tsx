@@ -1,15 +1,17 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-
-import { AboutPage, HomePage, NotFoundPage } from 'pages';
-import { Layout } from 'components';
 import { useAppDispatch } from 'hooks/redux-hooks';
+
 import { getCharacters } from 'api';
 
+import { AboutPage, HomePage, NotFoundPage, ReadMorePage } from 'pages';
+import { Layout } from 'components';
+
 const routes = [
+  { path: '*', component: <NotFoundPage /> },
   { path: '/', component: <HomePage /> },
   { path: '/about', component: <AboutPage /> },
-  { path: '*', component: <NotFoundPage /> },
+  { path: '/character/:id', component: <ReadMorePage /> },
 ];
 
 const App = () => {
@@ -18,11 +20,12 @@ const App = () => {
   useEffect(() => {
     dispatch(getCharacters());
   }, []);
+
   return (
     <Routes>
       <Route element={<Layout />}>
-        {routes.map((route) => (
-          <Route key={route.path} path={route.path} element={route.component} />
+        {routes.map(({ path, component }) => (
+          <Route key={path} path={path} element={component} />
         ))}
       </Route>
     </Routes>
