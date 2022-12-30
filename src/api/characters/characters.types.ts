@@ -1,6 +1,7 @@
 export enum CharacterQuery {
   name = 'name',
   page = 'page',
+  status = 'status',
 }
 
 export interface ISearchCharactersProps {
