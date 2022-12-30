@@ -7,3 +7,4 @@ export * from './SpinnerAlert';
 export * from './Pagination';
 export * from './Button';
 export * from './Lists';
+export * from './Filter';
