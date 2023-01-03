@@ -4,7 +4,6 @@ import { useAppDispatch } from 'hooks/redux-hooks';
 import { CharacterQuery, searchCharacters } from 'api';
 
 import { FiSearch } from 'react-icons/fi';
-import { Button } from 'components/Button';
 
 export const Searcher = () => {
   const dispatch = useAppDispatch();
@@ -32,6 +31,7 @@ export const Searcher = () => {
           <FiSearch className="w-3 h-3 sm:w-5 sm:h-5 text-secondary-light dark:text-secondary-lighter" />
         </div>
         <input
+          ref={input}
           type="text"
           id="simple-search"
           className="bg-gray-50 border outline-none border-gray-300 text-secondary-darkest text-sm rounded-lg focus:border-primary-light block w-full pl-7 sm:pl-10 p-2.5  dark:bg-secondary-darker dark:border-secondary dark:placeholder-gray-400 dark:text-white dark:focus:border-secondary-lighter"
